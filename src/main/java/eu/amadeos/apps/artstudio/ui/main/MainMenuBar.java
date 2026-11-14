@@ -72,7 +72,10 @@ public final class MainMenuBar extends JMenuBar {
         JMenu styleMenu = Mnemonics.apply(new JMenu(), msg.get("menu.picture.style"));
         ButtonGroup styleGroup = new ButtonGroup();
         int n = 1;
-        for (Style s : Style.values()) {
+        Style.Group group = null;
+        for (Style s : Style.shown()) {
+            if (group != null && s.group() != group) styleMenu.addSeparator();
+            group = s.group();
             JRadioButtonMenuItem item = new JRadioButtonMenuItem(msg.get(s.key()));
             item.setName(s.key());
             if (n <= 9) item.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_0 + n, InputEvent.ALT_DOWN_MASK));

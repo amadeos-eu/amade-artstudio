@@ -9,19 +9,38 @@
 
 ## Features
 
-- **Twelve styles**:
-  - *Flow*: lines that follow the angle of a noise field, like hair or wood grain
-  - *Watercolour*: translucent washes with soft, frayed edges
-  - *Mosaic*: stones of irregular shape with grout between them, slightly darker towards their edges
-  - *Circles*: circles packed as tightly as chance allows, the large ones with rings
-  - *Colour Grid*: the picture split again and again into rectangles with thick lines, some fields coloured
-  - *Shapes*: square tiles, each with a quarter or half circle, a dot, a triangle or bars
-  - *Plants*: trees and shrubs grown from an L-system on a meadow
-  - *Landscape*: mountain ridges, hazier towards the back, with a sun or a moon
-  - *Wave Lines*: stacked lines on dark ground that swing out in the middle
-  - *Tiles*: quarter arcs on turned tiles that join into winding paths
-  - *Dots*: dots whose density and colour follow noise
-  - *Rosette*: damped oscillations in two directions, like a pendulum with a pen
+- **27 styles in four groups**, shown with a heading each in the style list and the *Style* menu:
+  - **Lines**
+    - *Flow*: lines that follow the angle of a noise field, like hair or wood grain
+    - *Wave Lines*: stacked lines on dark ground that swing out in the middle
+    - *Tiles*: quarter arcs on turned tiles that join into winding paths
+    - *Rosette*: damped oscillations in two directions, like a pendulum with a pen
+    - *Attractor*: millions of points of a chaotic map pile up into fine, cloudy loops
+    - *Wheel Curves*: wheels rolling inside and outside of wheels, drawn with a pen: flowers of fine lines
+  - **Areas**
+    - *Watercolour*: translucent washes with soft, frayed edges
+    - *Mosaic*: stones of irregular shape with grout between them, slightly darker towards their edges
+    - *Circles*: circles packed as tightly as chance allows, the large ones with rings
+    - *Colour Grid*: the picture split again and again into rectangles with thick lines, some fields coloured
+    - *Shapes*: square tiles, each with a quarter or half circle, a dot, a triangle or bars
+    - *Dots*: dots whose density and colour follow noise
+    - *Triangles*: a shaken grid of triangles over a soft gradient, like folded paper
+    - *Halftone*: dots in rows at an angle, larger where the picture is darker, in one to three inks as in old print
+    - *Labyrinth*: a maze grown at random, its paths coloured by how far they are from the middle
+  - **Nature**
+    - *Plants*: trees and shrubs grown from an L-system on a meadow
+    - *Landscape*: mountain ridges, hazier towards the back, with a sun or a moon
+    - *Marble*: noise folded into itself, with veins
+    - *Contour Lines*: a height map in colour bands with contour lines, every fifth one thicker
+    - *Night Sky*: a nebula with stars, the bright ones glowing
+    - *Reaction Patterns*: two substances that spread and react, as on the skin of fish and shells
+    - *Growth*: wandering particles stick to a growing figure: frost, coral or lightning
+  - **3D**
+    - *Cubes*: columns of cubes on an isometric grid, as high as a noise landscape says
+    - *Spheres*: shiny balls with soft shadows
+    - *Wireframe*: a landscape of lines in perspective with a low sun behind it
+    - *Tube Knot*: a tube tied into a knot, turned in space and shaded like a soft hose
+    - *Sculpture*: balls and rings melted into one smooth shape on a floor, with soft shadows
 - **The recipe**: style, seed (0 to 999 999 999), palette, four sliders (*Density*, *Size*, *Chaos*, *Line width* or *Edges*), paper texture and shape (16:10, 16:9, square, paper portrait or landscape). It is shown on the right and can be changed at any time.
 - **Colours**: six palettes, *Desktop Colours* from the amadeOS colour theme (they follow it when the theme changes), or colours of your own: click a colour to change it. *Keep colours for new pictures* keeps them while trying new seeds.
 - **New picture** (Ctrl+N, the die on the toolbar): a new seed and, unless the colours are kept, other colours. *Random Seed* (Ctrl+R) changes only the seed.

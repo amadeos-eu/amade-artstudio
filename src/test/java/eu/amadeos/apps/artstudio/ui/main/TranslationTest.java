@@ -30,6 +30,7 @@ class TranslationTest {
         for (Style s : Style.values()) {
             keys.add(s.key());
         }
+        for (Style.Group g : Style.Group.values()) keys.add(g.key());
         for (Palette p : Palette.BUILT_IN) keys.add(p.key());
         keys.add("palette." + Palette.CUSTOM);
         keys.add("palette." + Palette.DESKTOP);

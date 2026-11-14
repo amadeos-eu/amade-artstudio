@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 
 import java.awt.Color;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -56,7 +57,7 @@ class RecipeTest {
     @Test
     void notARecipe() {
         assertThrows(IllegalArgumentException.class, () -> Recipe.parse("hello"));
-        assertThrows(IllegalArgumentException.class, () -> Recipe.parse("style=cubes; seed=1; palette=night"));
+        assertThrows(IllegalArgumentException.class, () -> Recipe.parse("style=hexagons; seed=1; palette=night"));
         assertThrows(IllegalArgumentException.class, () -> Recipe.parse("style=flow; seed=abc; palette=night"));
         assertThrows(IllegalArgumentException.class, () -> Recipe.parse("style=flow; seed=1"));
         assertThrows(IllegalArgumentException.class, () -> Recipe.parse("style=flow; seed=1; colors=#FFFFFF"));
@@ -90,9 +91,34 @@ class RecipeTest {
             assertEquals("style." + s.id(), s.key());
         }
         assertEquals(Style.WAVES, Style.ofId(" WAVES ").orElseThrow());
-        assertTrue(Style.ofId("cubes").isEmpty());
+        assertTrue(Style.ofId("hexagons").isEmpty());
         assertTrue(Style.ofId(null).isEmpty());
-        assertEquals(List.of(Style.FLOW, Style.PLANTS, Style.WAVES, Style.TILES, Style.ROSETTE),
+        assertEquals(List.of(Style.FLOW, Style.PLANTS, Style.WAVES, Style.TILES, Style.ROSETTE, Style.CONTOURS,
+                        Style.WHEELS, Style.LABYRINTH, Style.GROWTH, Style.WIREFRAME),
                 List.of(Style.values()).stream().filter(Style::drawsLines).toList());
+    }
+
+    @Test
+    void newStylesComeAfterTheOldOnesSoOldRecipesKeepTheirPictures() {
+        // The random numbers of a style depend on its place in the list: the first twelve must stay where they are.
+        assertEquals(List.of(Style.FLOW, Style.WATERCOLOUR, Style.MOSAIC, Style.CIRCLES, Style.GRID, Style.SHAPES,
+                Style.PLANTS, Style.LANDSCAPE, Style.WAVES, Style.TILES, Style.DOTS, Style.ROSETTE),
+                List.of(Style.values()).subList(0, 12));
+    }
+
+    @Test
+    void theStyleListShowsEveryStyleOnceSortedByGroup() {
+        List<Style> shown = Style.shown();
+        assertEquals(Style.values().length, shown.size());
+        assertEquals(Set.of(Style.values()), Set.copyOf(shown));
+        for (int i = 1; i < shown.size(); i++) {
+            assertTrue(shown.get(i - 1).group().compareTo(shown.get(i).group()) <= 0, shown.get(i).name());
+        }
+        for (Style.Group group : Style.Group.values()) {
+            assertTrue(shown.stream().filter(s -> s.group() == group).count() >= 5, group.name());
+            assertEquals("style.group." + group.name().toLowerCase(java.util.Locale.ROOT), group.key());
+        }
+        assertEquals(Style.Group.SOLID, Style.SCULPTURE.group());
+        assertEquals(Style.Group.NATURE, Style.SKY.group());
     }
 }
