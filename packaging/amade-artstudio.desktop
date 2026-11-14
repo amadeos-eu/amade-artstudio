@@ -1,0 +1,24 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=amadeOS Art Studio
+Name[de]=amadeOS Kunstatelier
+Name[fr]=amadeOS Atelier d'art
+Name[es]=amadeOS Taller de arte
+Name[it]=amadeOS Atelier d'arte
+GenericName=Generative Art
+GenericName[de]=Generative Kunst
+GenericName[fr]=Art génératif
+GenericName[es]=Arte generativo
+GenericName[it]=Arte generativa
+Comment=Create pictures from styles, colours and chance, without internet
+Comment[de]=Bilder aus Stilen, Farben und Zufall erschaffen, ohne Internet
+Comment[fr]=Créer des images à partir de styles, de couleurs et du hasard, sans internet
+Comment[es]=Crear imágenes a partir de estilos, colores y azar, sin internet
+Comment[it]=Creare immagini da stili, colori e caso, senza internet
+Icon=amade-artstudio
+Exec=/usr/bin/amade-artstudio %F
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;
+Keywords=art;generative;picture;backdrop;wallpaper;poster;pattern;mosaic;watercolour;
+StartupNotify=true

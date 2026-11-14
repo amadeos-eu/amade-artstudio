@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- AppStream metadata of amade-artstudio, installed as /usr/share/metainfo/eu.amadeos.apps.artstudio.metainfo.xml.
+     amadeOS Software shows it for the installed package; a repository's appstream-generator reads it too. -->
+<component type="desktop-application">
+  <id>eu.amadeos.apps.artstudio</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>EUPL-1.2</project_license>
+
+  <name>amadeOS Art Studio</name>
+  <name xml:lang="de">amadeOS Kunstatelier</name>
+  <name xml:lang="fr">amadeOS Atelier d'art</name>
+  <name xml:lang="es">amadeOS Taller de arte</name>
+  <name xml:lang="it">amadeOS Atelier d'arte</name>
+
+  <summary>Create pictures from styles, colours and chance, without internet</summary>
+  <summary xml:lang="de">Bilder aus Stilen, Farben und Zufall erschaffen, ohne Internet</summary>
+  <summary xml:lang="fr">Créer des images à partir de styles, de couleurs et du hasard, sans internet</summary>
+  <summary xml:lang="es">Crear imágenes a partir de estilos, colores y azar, sin internet</summary>
+  <summary xml:lang="it">Creare immagini da stili, colori e caso, senza internet</summary>
+
+  <description>
+    <p>amade-artstudio is the generative art studio of the amadeOS desktop. Pick a style and colours, move a few sliders and let chance do the rest. Every picture is drawn on this computer from a short recipe: the same recipe always gives the same picture, at any size.</p>
+    <p xml:lang="de">amade-artstudio ist das Studio für generative Kunst des amadeOS-Desktops. Einen Stil und Farben wählen, ein paar Regler schieben und den Rest dem Zufall überlassen. Jedes Bild entsteht auf diesem Rechner aus einem kurzen Rezept: dasselbe Rezept ergibt immer dasselbe Bild, in jeder Größe.</p>
+    <p xml:lang="fr">amade-artstudio est l'atelier d'art génératif du bureau amadeOS. Choisir un style et des couleurs, déplacer quelques curseurs et laisser le hasard faire le reste. Chaque image est dessinée sur cet ordinateur à partir d'une courte recette : la même recette donne toujours la même image, à toute taille.</p>
+    <p xml:lang="es">amade-artstudio es el estudio de arte generativo del escritorio amadeOS. Elegir un estilo y colores, mover algunos controles y dejar el resto al azar. Cada imagen se dibuja en este ordenador a partir de una receta corta: la misma receta da siempre la misma imagen, a cualquier tamaño.</p>
+    <p xml:lang="it">amade-artstudio è lo studio di arte generativa del desktop amadeOS. Scegliere uno stile e dei colori, spostare qualche cursore e lasciare il resto al caso. Ogni immagine viene disegnata su questo computer a partire da una breve ricetta: la stessa ricetta dà sempre la stessa immagine, a qualsiasi dimensione.</p>
+    <ul>
+      <li>Twelve styles, from flowing lines and watercolour to mosaic, landscape and rosette</li>
+      <li xml:lang="de">Zwölf Stile, von fließenden Linien und Aquarell bis Mosaik, Landschaft und Rosette</li>
+      <li xml:lang="fr">Douze styles, des lignes fluides et de l'aquarelle à la mosaïque, au paysage et à la rosace</li>
+      <li xml:lang="es">Doce estilos, desde líneas fluidas y acuarela hasta mosaico, paisaje y roseta</li>
+      <li xml:lang="it">Dodici stili, dalle linee fluide e dall'acquerello al mosaico, al paesaggio e al rosone</li>
+      <li>Six palettes, the colours of the desktop or colours of your own</li>
+      <li xml:lang="de">Sechs Paletten, die Farben des Desktops oder eigene Farben</li>
+      <li xml:lang="fr">Six palettes, les couleurs du bureau ou vos propres couleurs</li>
+      <li xml:lang="es">Seis paletas, los colores del escritorio o colores propios</li>
+      <li xml:lang="it">Sei tavolozze, i colori del desktop o colori propri</li>
+      <li>Nine variations at a click and a history of the last forty pictures</li>
+      <li xml:lang="de">Neun Varianten auf einen Klick und ein Verlauf der letzten vierzig Bilder</li>
+      <li xml:lang="fr">Neuf variantes en un clic et un historique des quarante dernières images</li>
+      <li xml:lang="es">Nueve variantes con un clic y un historial de las últimas cuarenta imágenes</li>
+      <li xml:lang="it">Nove varianti con un clic e una cronologia delle ultime quaranta immagini</li>
+      <li>Set a picture as the backdrop of a workspace or export it as a poster up to A2</li>
+      <li xml:lang="de">Ein Bild als Hintergrund einer Arbeitsfläche setzen oder als Poster bis A2 exportieren</li>
+      <li xml:lang="fr">Utiliser une image comme fond d'un espace de travail ou l'exporter en affiche jusqu'au A2</li>
+      <li xml:lang="es">Usar una imagen como fondo de un espacio de trabajo o exportarla como póster hasta A2</li>
+      <li xml:lang="it">Usare un'immagine come sfondo di un'area di lavoro o esportarla come poster fino ad A2</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">amade-artstudio.desktop</launchable>
+  <icon type="stock">amade-artstudio</icon>
+  <categories>
+    <category>Graphics</category>
+  </categories>
+
+  <url type="homepage">https://github.com/amadeos-eu/amade-artstudio</url>
+  <url type="bugtracker">https://github.com/amadeos-eu/amade-artstudio/issues</url>
+  <developer id="eu.amadeos">
+    <name>amadeOS Project</name>
+  </developer>
+
+  <screenshots>
+    <screenshot type="default">
+      <caption>A picture in the Flow style with its recipe</caption>
+      <caption xml:lang="de">Ein Bild im Stil Strömung mit seinem Rezept</caption>
+      <caption xml:lang="fr">Une image dans le style Courant avec sa recette</caption>
+      <caption xml:lang="es">Una imagen en el estilo Corriente con su receta</caption>
+      <caption xml:lang="it">Un'immagine nello stile Corrente con la sua ricetta</caption>
+      <image>https://raw.githubusercontent.com/amadeos-eu/amade-artstudio/main/docs/screenshots/amade-artstudio.png</image>
+    </screenshot>
+  </screenshots>
+
+  <provides>
+    <binary>amade-artstudio</binary>
+  </provides>
+  <content_rating type="oars-1.1"/>
+</component>
