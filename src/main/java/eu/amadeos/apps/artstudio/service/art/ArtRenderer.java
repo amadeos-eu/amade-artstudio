@@ -66,6 +66,21 @@ public final class ArtRenderer {
             case TILES -> LineStyles::tiles;
             case DOTS -> AreaStyles::dots;
             case ROSETTE -> LineStyles::rosette;
+            case ATTRACTOR -> FieldStyles::attractor;
+            case REACTION -> FieldStyles::reaction;
+            case MARBLE -> FieldStyles::marble;
+            case CONTOURS -> FieldStyles::contours;
+            case SKY -> FieldStyles::sky;
+            case WHEELS -> PatternStyles::wheels;
+            case LABYRINTH -> PatternStyles::labyrinth;
+            case GROWTH -> PatternStyles::growth;
+            case TRIANGLES -> PatternStyles::triangles;
+            case HALFTONE -> PatternStyles::halftone;
+            case CUBES -> SolidStyles::cubes;
+            case SPHERES -> SolidStyles::spheres;
+            case WIREFRAME -> SolidStyles::wireframe;
+            case KNOT -> SolidStyles::knot;
+            case SCULPTURE -> SolidStyles::sculpture;
         };
     }
 
